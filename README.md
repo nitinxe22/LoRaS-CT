@@ -18,6 +18,23 @@ attention.
 | `NCT100K.ipynb` | NCT100k experiments |
 | `KD-WithoutKD_LC-NCT.ipynb` | KD and without-KD experiments |
 | `LoRaS-CT_KD_vs_NoKD.ipynb` | KD vs. without-KD comparison |
+
+## Trained Weights
+
+Trained model weights are available in the [Releases](https://github.com/nitinxe22/LoRaS-CT/releases/tag/weights-v1) section:
+
+| Model | Dataset | Size | Download |
+|---|---|---|---|
+| LoRaS-CT | LC25000 | 111 MB | [Download](https://github.com/nitinxe22/LoRaS-CT/releases/download/weights-v1/LC25000_LoRaS-CT_weights.pth) |
+| MHA-Net | LC25000 | 128 MB | [Download](https://github.com/nitinxe22/LoRaS-CT/releases/download/weights-v1/LC25000_MHA-Net_baseline_weights.pth) |
+| LoRaS-CT | NCT100k | 111 MB | [Download](https://github.com/nitinxe22/LoRaS-CT/releases/download/weights-v1/NCT100k_LoRaS-CT_weights.pth) |
+| MHA-Net | NCT100k | 128 MB | [Download](https://github.com/nitinxe22/LoRaS-CT/releases/download/weights-v1/NCT100k_MHA-Net_baseline_weights.pth) |
+
+### Loading a checkpoint
+```python
+import torch
+model.load_state_dict(torch.load('LC25000_LoRaS-CT_weights.pth', map_location='cpu'))
+```
 ## Requirements
 - Python 3.x
 - PyTorch 2.6.0
